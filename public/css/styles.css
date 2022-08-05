@@ -33,8 +33,9 @@ header .input {
 
 .news {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2rem;
+  margin: 0 auto;
 }
 .news_card {
   text-decoration: none;
@@ -50,4 +51,35 @@ header .input {
   max-width: 1300px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+figure {
+  width: 100%;
+  min-width: 100px;
+  margin: 0;
+}
+
+.video-stream, .html5-main-video {
+  width: 200px;
+}
+
+@media (max-width: 800px) {
+  body h2 {
+    font-size: 1.1rem;
+  }
+  body p {
+    font-size: 0.9rem;
+  }
+  iframe {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media (max-width: 500px) {
+  body h2 {
+    font-size: 1rem;
+  }
+  body p {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
