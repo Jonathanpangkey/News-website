@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/styles.css" />
+		<title>News website</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header_logo">Node js news</div>
+			<div class="header_search">
+				<form action="/" method="POST">
+					<input class="input" type="text" name="search" placeholder="search news" required>
+					<input class="input" type="submit" value="search">
+				</form>
+			</div>
+		</header>
+
+		<div class="wrapper">
+			<div class="news">
+				<% if (articles != null) { %>
+				<% articles.forEach(function(article, index){ %>
+				<a href="/article/<%- article.id %>" class="news_card">
+					<img src="<%- article.thumbnail_url %>" alt="">
+					<h2><%- article.title.rendered %></h2>
+					<p>
+						<%- article.excerpt.rendered %>
+					</p>
+				</a>
+				<% }) %>
+				<% } else { %>
+					<h3>No post found</h3>
+				<% } %>
+			</div>
+		</div>
+	</body>
+</html>

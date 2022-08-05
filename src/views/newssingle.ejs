@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/styles.css" />
+		<title>News website</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-logo">Node js news</div>
+			<div class="header-search">Search</div>
+		</header>
+
+		<div class="wrapper">
+			<div class="news_single">
+                <a href="/">&larr; Back</a>
+				<h2><%- article.title.rendered %></h2>
+				<h2><%- article.content.rendered %></h2>
+			</div>
+		</div>
+	</body>
+</html>
